@@ -4,6 +4,7 @@ package wka.com.remmembergps.Utils;
  * Created by slave00 on 6/1/16.
  */
 public class Constants {
+    public static final String BROADCAST_LOCATION_SIGNATURE = "com.wka.remmembergps.intent.action.GPSMANAGER";
 
     public static final class DatabaseConstants {
         public static final String COMMA_SEP = ", ";
@@ -36,5 +37,9 @@ public class Constants {
 
     public static final class Intents {
         public static final int BOOKMARK_POSITION = 1;
+        public static final String LOCATION_STATUS_LONGITUDE = "longitude";
+        public static final String LOCATION_STATUS_LATITUDE = "latitude";
+        public static final String LOCATION_STATUS_ALTITUDE = "altitude";
+        public static final String LOCATION_STATUS_SPEED = "speed";
     }
 }
