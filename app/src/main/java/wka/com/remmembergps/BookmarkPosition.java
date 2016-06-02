@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.widget.TextView;
 
+import wka.com.remmembergps.Utils.Constants;
+
 /**
  * Created by slave00 on 6/2/16.
  */
@@ -17,18 +19,11 @@ public class BookmarkPosition extends FragmentActivity {
 
         setContentView(R.layout.activity_bookmark);
 
-        Intent i = getIntent();
-        Bundle b = i.getExtras();
+        TextView latitudeTextView = (TextView) findViewById( R.id.textView5 );
+        latitudeTextView.setText(String.valueOf(getIntent().getStringExtra(Constants.Intents.LOCATION_STATUS_LATITUDE)));
 
-        if( b != null ) {
-            Double latitude = b.getDouble( "latitude" );
-            Double longitude = b.getDouble( "longitude" );
+        TextView longitudeTextView = (TextView) findViewById( R.id.textView6 );
+        longitudeTextView.setText(String.valueOf(getIntent().getStringExtra(Constants.Intents.LOCATION_STATUS_LONGITUDE)));
 
-            TextView latitudeTextView = (TextView) findViewById( R.id.textView5 );
-            latitudeTextView.setText( String.valueOf(latitude) );
-
-            TextView longitudeTextView = (TextView) findViewById( R.id.textView6 );
-            longitudeTextView.setText( String.valueOf(longitude) );
-        }
     }
 }
