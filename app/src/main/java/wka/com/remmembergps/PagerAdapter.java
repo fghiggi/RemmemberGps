@@ -4,6 +4,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import wka.com.remmembergps.Fragments.GpsStatusFragment;
+import wka.com.remmembergps.Fragments.MapFragment;
+
 /**
  * Created by slave00 on 6/2/16.
  */

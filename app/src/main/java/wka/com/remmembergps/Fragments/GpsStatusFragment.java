@@ -1,4 +1,4 @@
-package wka.com.remmembergps;
+package wka.com.remmembergps.Fragments;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import wka.com.remmembergps.R;
 import wka.com.remmembergps.Utils.Constants;
 
 /**

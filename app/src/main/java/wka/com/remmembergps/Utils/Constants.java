@@ -11,7 +11,7 @@ public class Constants {
 
         public static final String TEXT_TYPE = " TEXT";
 
-        public static final String DECIMAL_TYPE = " DOUBLE";
+        public static final String DECIMAL_TYPE = " DECIMAL(2,10)";
 
         public static final String INTEGER_TYPE = " INTEGER"
                 ;
@@ -41,5 +41,30 @@ public class Constants {
         public static final String LOCATION_STATUS_LATITUDE = "latitude";
         public static final String LOCATION_STATUS_ALTITUDE = "altitude";
         public static final String LOCATION_STATUS_SPEED = "speed";
+    }
+
+    public static  final class  PositionsDatabase {
+        public static final String DATABASE_NAME = "Positions.db";
+        public static final int DATABASE_VERSION = 1;
+
+        public static final class PositionTable {
+            public static final String NAME = "position";
+
+            public static final class Columns {
+                public static final String UUID = "uuid";
+                public static final String LATITUDE = "latitude";
+                public static final String LONGITUDE = "longitude";
+                public static final String DESCRIPTION = "description";
+            }
+        }
+
+        public static final String SQL_CREATION =
+                "CREATE TABLE " +
+                        PositionTable.NAME + "(" +
+                        DatabaseConstants.GENERATED_ID + DatabaseConstants.INTEGER_TYPE + DatabaseConstants.PRIMARY_TYPE + DatabaseConstants.INCREMENT_TYPE + DatabaseConstants.COMMA_SEP +
+                        PositionTable.Columns.UUID + DatabaseConstants.TEXT_TYPE + DatabaseConstants.COMMA_SEP +
+                        PositionTable.Columns.LATITUDE + DatabaseConstants.TEXT_TYPE + DatabaseConstants.COMMA_SEP +
+                        PositionTable.Columns.LONGITUDE + DatabaseConstants.TEXT_TYPE + DatabaseConstants.COMMA_SEP +
+                        PositionTable.Columns.DESCRIPTION + DatabaseConstants.TEXT_TYPE + ")";
     }
 }
